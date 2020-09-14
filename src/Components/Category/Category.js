@@ -40,12 +40,9 @@ const Category = () => {
       <br />
       <div className="category__items">
         <div className="row">
-          {/* {food
-            .map((item, id) => <CategoryDetail key={id} item={item} />)
-            .slice(0, 6)} */}
           {filterFood.map((item) =>
             item.filtered === true ? (
-              <span key={item.name}>{item.title}</span>
+              <CategoryDetail key={item.id} item={item} />
             ) : (
               ""
             )
