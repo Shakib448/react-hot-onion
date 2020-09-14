@@ -1,0 +1,25 @@
+.footer {
+    background-color: #000;
+    padding: 5%;
+    height: 400px;
+}
+
+.footer__logo  {
+    height: 30px;
+    margin-left: 50px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    color: white;
+    margin-bottom : 5px;
+    cursor: pointer;
+}
+
+.footer__copy {
+    color:  #7a7878;
+    margin-top: 100px;
+}

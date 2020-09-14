@@ -1,0 +1,18 @@
+.card {
+    border: none;
+}
+
+.details__btn{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    background-color: transparent;
+    transition: .5s;
+}
+
+.details__btn:hover{
+    background-color: #F91944;
+    color: white;
+
+}

@@ -1,4 +1,3 @@
-
 .banner {
     background-image: url('../Resources/bannerbackground.png');
     background-size: 100%;
@@ -9,7 +8,7 @@
 }
 
 .banner__middle{
-    padding: 11% 10% 15% 30%;
+    padding: 11% 10% 15% 35%;
 }
 
 .banner__input{
