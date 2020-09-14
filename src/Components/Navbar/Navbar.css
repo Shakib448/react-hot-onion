@@ -1,0 +1,31 @@
+.navbar__logo  {
+    height: 30px;
+    margin-left: 50px;
+}
+.nav__button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    background-color: transparent;
+    transition: .5s;
+}
+
+.nav__button:hover{
+    background-color: #F91944;
+    color: white;
+
+}
+
+.nav__button__active{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    background-color: #F91944;
+    color: white;
+}
+
+.nav__cart{
+    margin-top: 10px;
+}
