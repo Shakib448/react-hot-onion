@@ -30,4 +30,6 @@
     color: white;
     border-radius: 25px;
 }
-
+.category__active{
+    color: #F91944;
+}
