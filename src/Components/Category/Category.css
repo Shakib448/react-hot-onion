@@ -5,3 +5,29 @@
 .category__middleButton{
     text-align: center;
 }
+
+.category__btn{
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.category__btn:hover {
+    background-color: transparent;
+    color: #F91944;
+}
+
+.category__checkoutBtn {
+    text-align: center;
+}
+
+.category__checkoutBtn > button {
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    background-color: #F91944;
+    color: white;
+    border-radius: 25px;
+}
+

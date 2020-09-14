@@ -1,0 +1,8 @@
+.card.text-center {
+    cursor: pointer;
+    transition: .5s;
+}
+
+.card.text-center:hover {
+    box-shadow: 10px 10px 50px lightgrey;
+}
