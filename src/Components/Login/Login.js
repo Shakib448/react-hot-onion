@@ -1,14 +1,19 @@
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import "./Login.css";
 import logoImg from "../Resources/logo2.png";
 import * as firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from "../../firebase.config";
+import { useHistory, useLocation } from "react-router-dom";
+import { UserLoggedIn } from "../../App";
 
 firebase.initializeApp(firebaseConfig);
 
 const Login = () => {
+  const [loggedIn, setLoggedIn] = useContext(UserLoggedIn);
+  console.log(loggedIn);
+
   const { register, errors, handleSubmit, watch } = useForm({});
   const password = useRef({});
   password.current = watch("password", "");
@@ -24,8 +29,14 @@ const Login = () => {
     error: "",
   });
 
+  let history = useHistory();
+  let location = useLocation();
+
+  let { from } = location.state || { from: { pathname: "/" } };
+
   const onSubmit = (data) => {
     setUser(data);
+    // setLoggedIn(data);
     if (newUserInfo && user.email && user.password) {
       firebase
         .auth()
@@ -34,7 +45,9 @@ const Login = () => {
           const newUser = { ...user };
           newUser.error = "";
           newUser.success = true;
+          history.replace(from);
           setUser(newUser);
+          // setLoggedIn(newUser);
         })
         .catch((error) => {
           const newUser = { ...user };
@@ -52,8 +65,9 @@ const Login = () => {
           const newUser = { ...user };
           newUser.error = "";
           newUser.success = true;
+          history.replace(from);
           setUser(newUser);
-          console.log(res);
+          // setLoggedIn(newUser);
         })
         .catch((error) => {
           const newUser = { ...user };
