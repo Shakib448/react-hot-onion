@@ -7,6 +7,7 @@ input.btn.btn-primary {
     background-color: #F91944;
     border: none;
     outline: none;
+    margin-bottom: 30px;
 }
 
 input.form-control {
