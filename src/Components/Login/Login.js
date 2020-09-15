@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import "./Login.css";
+import logoImg from "../Resources/logo2.png";
 
 const Login = () => {
   const { register, errors, handleSubmit } = useForm();
@@ -10,7 +11,9 @@ const Login = () => {
       <div className="row">
         <div className="col-md-3"></div>
         <div className="col-md-6">
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <img src={logoImg} className="img-fluid" />
+          <br />
+          <form onSubmit={handleSubmit(onSubmit)} className="m-4">
             <div className="form-group" style={{ textAlign: "center" }}>
               <input
                 name="fullName"
