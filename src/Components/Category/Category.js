@@ -27,6 +27,12 @@ const Category = () => {
     history.push(url);
   };
 
+  const login = useHistory();
+
+  const Login = () => {
+    login.push("/login");
+  };
+
   return (
     <div className="category container">
       <div className="category__middleButton">
@@ -69,9 +75,7 @@ const Category = () => {
           )}
         </div>
         <div className="category__checkoutBtn">
-          <Link to="/login">
-            <button> Checkout Your Food</button>
-          </Link>
+          <button onClick={() => Login()}> Checkout Your Food</button>
         </div>
       </div>
     </div>
