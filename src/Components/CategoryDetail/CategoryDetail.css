@@ -29,3 +29,13 @@
     color: #F91944;
 
 }
+
+.categoryDetail__btn{
+    border: none;
+    padding: 10px 40px;
+    border-radius: 25px;
+    font-weight: bold;
+    background-color: #F91944;
+    color: white;
+}
+

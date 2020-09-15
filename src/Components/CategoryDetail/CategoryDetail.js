@@ -4,6 +4,7 @@ import FoodData from "../FoodData";
 import "./CategoryDetail.css";
 import AddIcon from "@material-ui/icons/Add";
 import RemoveIcon from "@material-ui/icons/Remove";
+import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
 
 const CategoryDetail = () => {
   let { id } = useParams();
@@ -28,6 +29,7 @@ const CategoryDetail = () => {
             beatae, nam iusto nisi, eum id animi numquam repudiandae
             consectetur? Aperiam, ea.{" "}
           </h6>
+          <br />
           <div className="row">
             <div className="col-md-4">
               <h1>$ {detailFood.price}</h1>
@@ -40,6 +42,11 @@ const CategoryDetail = () => {
               <AddIcon className="category__add" />
             </div>
           </div>
+          <br />
+          <button className="categoryDetail__btn">
+            {" "}
+            <ShoppingCartOutlinedIcon /> Add
+          </button>
         </div>
         <div className="col-md-6">
           <img className="img-fluid" src={detailFood.img} alt="" />
