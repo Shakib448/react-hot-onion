@@ -1,9 +1,9 @@
-.deliveryDetails {
+.login {
     padding : 50px 0px;
 }
 
 input.btn.btn-primary {
-    padding: 20px 45%;
+    padding: 20px 37%;
     background-color: #F91944;
     border: none;
     outline: none;
@@ -17,6 +17,9 @@ input.form-control {
 }
 
 input.form-control {
+    background-color: #F5F5F5 !important;
+}
+textarea.form-control {
     background-color: #F5F5F5 !important;
 }
 
