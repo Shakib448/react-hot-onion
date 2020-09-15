@@ -1,3 +1,24 @@
 .login {
     padding : 50px 0px;
 }
+
+input.btn.btn-primary {
+    padding: 20px 45%;
+    background-color: #F91944;
+    border: none;
+    outline: none;
+}
+
+input.form-control {
+    height: 65px;
+    background-color: #F5F5F5;
+    border: none;
+    outline : none;
+}
+
+input.form-control {
+    background-color: #F5F5F5 !important;
+    outline : none !important;
+
+}
+
