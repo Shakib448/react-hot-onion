@@ -2,9 +2,13 @@ import React from "react";
 import "./DeliveryDetails.css";
 
 const PlaceOrder = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className="placeOrder">
-      <form>
+      <form onSubmit={handleSubmit}>
         <h5>From: Gulshan Plaza Restura Grp</h5>
         <h5>Time: Aribing in 20-30 min</h5>
         <h5>Road No: 107 Rd No 8</h5>

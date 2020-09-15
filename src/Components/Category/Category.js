@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Category.css";
 import foodData from "../FoodData";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const Category = () => {
   const [food, setFood] = useState("Lunch");

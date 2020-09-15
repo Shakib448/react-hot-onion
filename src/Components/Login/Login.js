@@ -11,7 +11,7 @@ const Login = () => {
       <div className="row">
         <div className="col-md-3"></div>
         <div className="col-md-6">
-          <img src={logoImg} className="img-fluid" />
+          <img src={logoImg} className="img-fluid" alt="some" />
           <br />
           <form onSubmit={handleSubmit(onSubmit)} className="m-4">
             <div className="form-group" style={{ textAlign: "center" }}>
