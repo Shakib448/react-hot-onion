@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Category.css";
 import foodData from "../FoodData";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const Category = () => {
   const [food, setFood] = useState("Lunch");
@@ -69,7 +69,9 @@ const Category = () => {
           )}
         </div>
         <div className="category__checkoutBtn">
-          <button> Checkout Your Food</button>
+          <Link to="/login">
+            <button> Checkout Your Food</button>
+          </Link>
         </div>
       </div>
     </div>
