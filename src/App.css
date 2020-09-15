@@ -1,3 +1,11 @@
+*{
+  outline: none;
+  margin : 0px;
+  padding : 0px;
+}
+
+button:focus {outline:0;}
+
 .App {
   overflow: hidden;
 }

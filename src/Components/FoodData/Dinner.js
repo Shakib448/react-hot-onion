@@ -9,6 +9,7 @@ import d6 from "../Resources/Dinner/dinner6.png";
 
 const Dinner = [
   {
+    id: 13,
     title: "Salmon with Grapefruit and Lenti Salad",
     description: "How we dream about our future",
     img: d1,
@@ -16,6 +17,7 @@ const Dinner = [
     price: 9.99,
   },
   {
+    id: 14,
     title: "Lemony Salmon Piccata",
     description: "How we dream about our future",
     img: d2,
@@ -23,6 +25,7 @@ const Dinner = [
     price: 10.99,
   },
   {
+    id: 15,
     title: "Pork Tenderloin With Quninoa Pilaf",
     description: "How we dream about our future",
     img: d3,
@@ -30,6 +33,7 @@ const Dinner = [
     price: 12.99,
   },
   {
+    id: 16,
     title: "French fires with cheses",
     description: "How we dream about our future",
     img: d4,
@@ -37,6 +41,7 @@ const Dinner = [
     price: 8.99,
   },
   {
+    id: 17,
     title: "Garlic Butter Baked Salmon",
     description: "How we dream about our future",
     img: d5,
@@ -44,6 +49,7 @@ const Dinner = [
     price: 15.99,
   },
   {
+    id: 18,
     title: "Baked Chicken",
     description: "How we dream about our future",
     img: d6,

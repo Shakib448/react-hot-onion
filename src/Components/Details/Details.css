@@ -9,6 +9,7 @@
     font-weight: bold;
     background-color: transparent;
     transition: .5s;
+    outline: none;
 }
 
 .details__btn:hover{
@@ -16,3 +17,4 @@
     color: white;
 
 }
+

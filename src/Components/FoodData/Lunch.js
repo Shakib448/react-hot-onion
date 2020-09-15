@@ -9,6 +9,7 @@ import l6 from "../Resources/lunch/lunch6.png";
 
 const Lunch = [
   {
+    id: 7,
     title: "Healthy Meal Plan",
     description: "How we dream about our future",
     img: l1,
@@ -16,6 +17,7 @@ const Lunch = [
     price: 23.99,
   },
   {
+    id: 8,
     title: "Fried Chicken Bento",
     description: "How we dream about our future",
     img: l2,
@@ -23,6 +25,7 @@ const Lunch = [
     price: 9.99,
   },
   {
+    id: 9,
     title: "Tarrango-Rubbed-Salmon",
     description: "How we dream about our future",
     img: l3,
@@ -30,6 +33,7 @@ const Lunch = [
     price: 6.99,
   },
   {
+    id: 10,
     title: "Indian Lunch",
     description: "How we dream about our future",
     img: l4,
@@ -37,6 +41,7 @@ const Lunch = [
     price: 8.99,
   },
   {
+    id: 11,
     title: "Beef Steak",
     description: "How we dream about our future",
     img: l5,
@@ -44,6 +49,7 @@ const Lunch = [
     price: 15.99,
   },
   {
+    id: 12,
     title: "Honey-soy-Glazed Salmon with Peppers",
     description: "How we dream about our future",
     img: l6,

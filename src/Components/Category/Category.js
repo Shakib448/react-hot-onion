@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import CategoryDetail from "../CategoryDetail/CategoryDetail";
 import "./Category.css";
 import foodData from "../FoodData";
+import { useHistory } from "react-router-dom";
 
 const Category = () => {
   const [food, setFood] = useState("Lunch");
@@ -19,6 +19,13 @@ const Category = () => {
     }));
     setFilterFood(filtered);
   }, [food]);
+
+  let history = useHistory();
+
+  const handleCategoryDetail = (id) => {
+    const url = `/food/category/${id}`;
+    history.push(url);
+  };
 
   return (
     <div className="category container">
@@ -42,7 +49,20 @@ const Category = () => {
         <div className="row">
           {filterFood.map((item) =>
             item.filtered === true ? (
-              <CategoryDetail key={item.id} item={item} />
+              <div
+                className="col-md-4"
+                key={item.id}
+                onClick={() => handleCategoryDetail(item.id)}
+              >
+                <div className="card text-center" style={{ width: "18rem" }}>
+                  <img src={item.img} className="card-img-top" alt="..." />
+                  <div className="card-body">
+                    <h5 className="card-id">{item.title}</h5>
+                    <p className="card-text">{item.description}</p>
+                    <h5>$ {item.price}</h5>
+                  </div>
+                </div>
+              </div>
             ) : (
               ""
             )
