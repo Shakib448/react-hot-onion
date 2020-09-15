@@ -13,11 +13,7 @@ const Login = () => {
   const password = useRef({});
   password.current = watch("password", "");
 
-  // const [signIn, setSingIn] = useState([]);
-
   const [newUserInfo, setNewUserInfo] = useState(false);
-
-  const provider = new firebase.auth.GoogleAuthProvider();
 
   const [user, setUser] = useState({
     isSignedIn: false,
@@ -27,8 +23,6 @@ const Login = () => {
     confirmPassword: "",
     error: "",
   });
-
-  // console.log(user);
 
   const onSubmit = (data) => {
     setUser(data);
@@ -41,7 +35,6 @@ const Login = () => {
           newUser.error = "";
           newUser.success = true;
           setUser(newUser);
-          console.log(res);
         })
         .catch((error) => {
           const newUser = { ...user };
@@ -152,27 +145,39 @@ const Login = () => {
             </div>
             <div style={{ textAlign: "center" }}>
               <input
-                // disabled
                 className="btn btn-primary"
                 type="submit"
                 value={newUserInfo ? "Sign up" : "Sing In"}
               />
               <br />
+              {(user.error && (
+                <p className="alert alert-danger" role="alert">
+                  {" "}
+                  {user.error}{" "}
+                </p>
+              )) ||
+                (user.success && (
+                  <p className="alert alert-success text-center" role="alert">
+                    {" "}
+                    User {newUserInfo
+                      ? "created"
+                      : "Logged In"} successfully{" "}
+                  </p>
+                ))}
               <span
                 className="mt-4"
                 style={{ color: "red", marginTop: "20px", cursor: "pointer" }}
                 onClick={() => setNewUserInfo(!newUserInfo)}
               >
-                <h4>Already have a account?</h4>
+                <h4>
+                  {" "}
+                  {newUserInfo
+                    ? "Already I have a account"
+                    : "I have no account created?"}{" "}
+                  a account?
+                </h4>
               </span>
             </div>
-            <p style={{ color: "red" }}> {user.error} </p>
-            {user.success && (
-              <p style={{ color: "green" }}>
-                {" "}
-                User {newUserInfo ? "created" : "Logged In"} successfully{" "}
-              </p>
-            )}
           </form>
         </div>
         <div className="col-md-3"></div>
