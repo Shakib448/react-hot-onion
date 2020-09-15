@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import "./DeliveryDetails.css";
+import PlaceOrder from "./PlaceOrder";
 
 const DeliveryDetails = () => {
   const { register, errors, handleSubmit } = useForm();
@@ -63,7 +64,7 @@ const DeliveryDetails = () => {
               </div>
               <div className="form-group" style={{ textAlign: "center" }}>
                 <textarea
-                  rows="3"
+                  rows="5"
                   name="address"
                   placeholder="Add delivery instructions"
                   className="form-control"
@@ -83,10 +84,10 @@ const DeliveryDetails = () => {
               </div>
             </form>
           </div>
-          <div className="col-md-1">
-            <br />
+          <div className="col-md-2"></div>
+          <div class="col-md-4 order-md-2 mb-4">
+            <PlaceOrder />
           </div>
-          <div className="col-md-6"></div>
         </div>
       </div>
     </div>

@@ -24,3 +24,11 @@ textarea.form-control {
     border: none;
 }
 
+li.list-group-item.d-flex.justify-content-between.lh-condensed {
+    border: none;
+    color: black;
+}
+
+.placeOrder{
+    padding : 50px 0px;
+}
