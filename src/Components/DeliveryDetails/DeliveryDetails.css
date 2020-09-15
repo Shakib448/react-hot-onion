@@ -3,7 +3,7 @@
 }
 
 input.btn.btn-primary {
-    padding: 20px 37%;
+    padding: 20px 37% !important;
     background-color: #F91944;
     border: none;
     outline: none;

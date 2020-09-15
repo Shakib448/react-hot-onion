@@ -39,7 +39,11 @@ const PlaceOrder = () => {
             <span className="text-muted">$320</span>
           </li>
         </ul>
-        <input className="btn btn-primary" type="submit" value="Place Order" />
+        <input
+          className="btn btn-primary placeOrder__btn"
+          type="submit"
+          value="Place Order"
+        />
       </form>
     </div>
   );

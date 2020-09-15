@@ -85,7 +85,7 @@ const DeliveryDetails = () => {
             </form>
           </div>
           <div className="col-md-2"></div>
-          <div class="col-md-4 order-md-2 mb-4">
+          <div className=" col-md-4 order-md-2 mb-4">
             <PlaceOrder />
           </div>
         </div>

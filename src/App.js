@@ -25,10 +25,10 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route exact path="/food/category/:id" component={CategoryDetail} />
             <Route exact path="/login" component={Login} />
-            <Route exact path="/delivery/details" component={DeliveryDetails} />
-            <PrivateRoute exact path="/contact">
-              <Contact />
+            <PrivateRoute exact path="/delivery/details">
+              <DeliveryDetails />
             </PrivateRoute>
+            <Route exact path="/contact" component={Contact} />
             <Route exact path="/thankyou" component={ThankYou} />
             <Route exact path="*" component={NotFound} />
           </Switch>
