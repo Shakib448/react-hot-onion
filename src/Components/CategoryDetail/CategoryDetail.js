@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import FoodData from "../FoodData";
 import "./CategoryDetail.css";
 import AddIcon from "@material-ui/icons/Add";
@@ -14,6 +14,12 @@ const CategoryDetail = () => {
   useEffect(() => {
     setDetailFood(foodData);
   }, [foodData]);
+
+  const history = useHistory();
+
+  const handleBack = () => {
+    history.push("/");
+  };
 
   return (
     <div className="categoryDetail container">
@@ -43,9 +49,13 @@ const CategoryDetail = () => {
             </div>
           </div>
           <br />
-          <button className="categoryDetail__btn">
+          <button className="categoryDetail__btn mr-2">
             {" "}
             <ShoppingCartOutlinedIcon /> Add
+          </button>
+          <button onClick={handleBack} className="categoryDetail__btn">
+            {" "}
+            Go Back{" "}
           </button>
         </div>
         <div className="col-md-6">
