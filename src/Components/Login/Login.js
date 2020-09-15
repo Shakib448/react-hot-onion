@@ -12,7 +12,7 @@ firebase.initializeApp(firebaseConfig);
 
 const Login = () => {
   const [loggedIn, setLoggedIn] = useContext(UserLoggedIn);
-  console.log(loggedIn);
+  console.log("I am logged in ", loggedIn);
 
   const { register, errors, handleSubmit, watch } = useForm({});
   const password = useRef({});
@@ -36,7 +36,7 @@ const Login = () => {
 
   const onSubmit = (data) => {
     setUser(data);
-    // setLoggedIn(data);
+    setLoggedIn(data);
     if (newUserInfo && user.email && user.password) {
       firebase
         .auth()
@@ -47,7 +47,7 @@ const Login = () => {
           newUser.success = true;
           history.replace(from);
           setUser(newUser);
-          // setLoggedIn(newUser);
+          setLoggedIn(newUser);
         })
         .catch((error) => {
           const newUser = { ...user };
@@ -67,7 +67,7 @@ const Login = () => {
           newUser.success = true;
           history.replace(from);
           setUser(newUser);
-          // setLoggedIn(newUser);
+          setLoggedIn(newUser);
         })
         .catch((error) => {
           const newUser = { ...user };
