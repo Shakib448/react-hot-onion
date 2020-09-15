@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+
+
 *{
   outline: none;
   margin : 0px;
   padding : 0px;
+  font-family: 'Montserrat', sans-serif;
 }
+
 
 button:focus {outline:0;}
 

@@ -23,6 +23,15 @@
 
 }
 
+.category__card {
+    cursor: pointer;
+    transition: .5s;
+}
+
+.category__card:hover {
+    box-shadow: 10px 10px 50px lightgrey;
+}
+
 .category__checkoutBtn > button {
     border: none;
     padding: 10px 20px;

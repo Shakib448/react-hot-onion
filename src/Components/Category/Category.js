@@ -50,7 +50,7 @@ const Category = () => {
           {filterFood.map((item) =>
             item.filtered === true ? (
               <div
-                className="col-md-4"
+                className="col-md-4 category__card"
                 key={item.id}
                 onClick={() => handleCategoryDetail(item.id)}
               >

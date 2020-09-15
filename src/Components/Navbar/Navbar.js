@@ -2,12 +2,15 @@ import React from "react";
 import navLogo from "../Resources/logo2.png";
 import "./Navbar.css";
 import ShoppingCartOutlinedIcon from "@material-ui/icons/ShoppingCartOutlined";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light">
-        <img src={navLogo} alt="" className="navbar__logo" />
+        <Link to="/">
+          <img src={navLogo} alt="" className="navbar__logo" />
+        </Link>
         <button
           className="navbar-toggler"
           type="button"

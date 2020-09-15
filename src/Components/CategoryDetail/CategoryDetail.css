@@ -1,8 +1,13 @@
-.card.text-center {
-    cursor: pointer;
-    transition: .5s;
+.categoryDetail{
+    padding : 50px;
 }
 
-.card.text-center:hover {
-    box-shadow: 10px 10px 50px lightgrey;
+.categoryDetail__detail {
+    padding: 80px 0px;
+}
+
+.categoryDetail__cart{
+    border: 1px solid lightgrey;
+    border-radius: 50px;
+    float: left;
 }
