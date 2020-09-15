@@ -21,5 +21,6 @@ input.form-control {
 }
 textarea.form-control {
     background-color: #F5F5F5 !important;
+    border: none;
 }
 
