@@ -4,7 +4,6 @@ import { UserLoggedIn } from "../../App";
 
 const PrivateRoute = ({ children, ...rest }) => {
   const [loggedIn, setLoggedIn] = useContext(UserLoggedIn);
-  console.log(loggedIn);
 
   return (
     <div>

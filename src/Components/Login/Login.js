@@ -29,25 +29,28 @@ const Login = () => {
     error: "",
   });
 
+  console.log("This is user", user);
+
   let history = useHistory();
   let location = useLocation();
 
   let { from } = location.state || { from: { pathname: "/" } };
 
   const onSubmit = (data) => {
-    setUser(data);
-    setLoggedIn(data);
-    if (newUserInfo && user.email && user.password) {
+    // setUser(data);
+    // setLoggedIn(data);
+    if (newUserInfo && data.email && data.password) {
       firebase
         .auth()
-        .createUserWithEmailAndPassword(user.email, user.password)
+        .createUserWithEmailAndPassword(data.email, data.password)
         .then((res) => {
-          const newUser = { ...user };
+          const newUser = { ...user, email: data.email, name: data.name };
+          console.log("this newUser", newUser);
           newUser.error = "";
           newUser.success = true;
-          history.replace(from);
           setUser(newUser);
           setLoggedIn(newUser);
+          history.replace(from);
         })
         .catch((error) => {
           const newUser = { ...user };
@@ -57,17 +60,18 @@ const Login = () => {
         });
     }
 
-    if (!newUserInfo && user.email && user.password) {
+    if (!newUserInfo && data.email && data.password) {
       firebase
         .auth()
-        .signInWithEmailAndPassword(user.email, user.password)
+        .signInWithEmailAndPassword(data.email, data.password)
         .then((res) => {
-          const newUser = { ...user };
+          const newUser = { ...user, email: data.email, name: data.name };
           newUser.error = "";
           newUser.success = true;
-          history.replace(from);
+          // history.replace(from);
           setUser(newUser);
           setLoggedIn(newUser);
+          history.replace(from);
         })
         .catch((error) => {
           const newUser = { ...user };
