@@ -166,6 +166,7 @@ const Login = () => {
                 <h4>Already have a account?</h4>
               </span>
             </div>
+            <p style={{ color: "red" }}> {user.error} </p>
             {user.success && (
               <p style={{ color: "green" }}>
                 {" "}
