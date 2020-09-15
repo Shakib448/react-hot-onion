@@ -174,7 +174,6 @@ const Login = () => {
                   {newUserInfo
                     ? "Already I have a account"
                     : "I have no account created?"}{" "}
-                  a account?
                 </h4>
               </span>
             </div>
