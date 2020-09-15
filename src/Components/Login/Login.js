@@ -50,7 +50,6 @@ const Login = () => {
           newUser.success = true;
           setUser(newUser);
           setLoggedIn(newUser);
-          history.replace(from);
         })
         .catch((error) => {
           const newUser = { ...user };
@@ -68,7 +67,6 @@ const Login = () => {
           const newUser = { ...user, email: data.email, name: data.name };
           newUser.error = "";
           newUser.success = true;
-          // history.replace(from);
           setUser(newUser);
           setLoggedIn(newUser);
           history.replace(from);
