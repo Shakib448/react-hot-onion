@@ -11,13 +11,6 @@ const Login = () => {
 
   console.log(signIn);
 
-  // if (
-  //   data.target.name === "password" &&
-  //   data.target.name === "confirmPassword"
-  // ) {
-  //   alert("Password didn't match");
-  // }
-
   const onSubmit = (data) => {
     setSingIn(data);
   };
@@ -35,11 +28,17 @@ const Login = () => {
                 name="fullName"
                 className="form-control"
                 placeholder="Full Name"
-                ref={register({ required: true })}
+                ref={register({
+                  required: "Name required",
+                  minLength: {
+                    value: 5,
+                    message: "Name should be 5 characters",
+                  },
+                })}
               />{" "}
               <br />
               <span style={{ color: "red" }}>
-                {errors.fullName && "Full name required"}
+                {errors.fullName && errors.fullName.message}
               </span>
             </div>
             <div className="form-group" style={{ textAlign: "center" }}>
