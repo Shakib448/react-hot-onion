@@ -10,4 +10,22 @@
     border: 1px solid lightgrey;
     border-radius: 50px;
     float: left;
+    padding : 13px 30px;
+}
+
+.category__remove{
+    margin-right : 30px;
+    cursor: pointer;
+}
+.category__add{
+    margin-left: 30px;
+    cursor: pointer;
+}
+.category__add:hover {
+    color: #F91944;
+}
+
+.category__remove:hover {
+    color: #F91944;
+
 }

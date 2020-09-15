@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import FoodData from "../FoodData";
 import "./CategoryDetail.css";
+import AddIcon from "@material-ui/icons/Add";
+import RemoveIcon from "@material-ui/icons/Remove";
 
 const CategoryDetail = () => {
   let { id } = useParams();
@@ -30,7 +32,13 @@ const CategoryDetail = () => {
             <div className="col-md-4">
               <h1>$ {detailFood.price}</h1>
             </div>
-            <div className="col-md-4 categoryDetail__cart"></div>
+            <div className="col-md-4 categoryDetail__cart">
+              <RemoveIcon className="category__remove" />
+              <span>
+                <b>1</b>
+              </span>
+              <AddIcon className="category__add" />
+            </div>
           </div>
         </div>
         <div className="col-md-6">
